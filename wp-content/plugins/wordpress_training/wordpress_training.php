@@ -23,19 +23,25 @@ define('WORDPRESS_TRAINING_URL', plugin_dir_url(__FILE__));
 register_activation_hook(__FILE__, 'wordpresstraining_activation');
 function wordpresstraining_activation()
 {
+    
     //Tao csdl
+    include_once WORDPRESS_TRAINING_PATH.'includes/db/migration.php';
 
     //Tao dl mau
+    include_once WORDPRESS_TRAINING_PATH.'includes/db/seeder.php';
 }
 
 
 //Định nghia hành động khi tắt đi
 register_deactivation_hook(__FILE__,'wordpresstraining_deactivatio');
 function wordpresstraining_deactivatio()
-{
+{   global $wpdb;
+     $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}orders" );
+     $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}order_detail" );
       //Xoa csdl
 
     //Xoá option
+    delete_option( 'wordpresstraining_setting_options' );
 }
 
 include_once WORDPRESS_TRAINING_PATH.'includes/includes.php';

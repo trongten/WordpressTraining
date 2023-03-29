@@ -168,6 +168,7 @@
 </div>
 
 <script>
+    let nonce = '<?= wp_create_nonce('wordpresstraining_change_status');?>'
     let ajax_url ='<?= admin_url('admin-ajax.php');?>'
     jQuery(document).ready(function(){
         jQuery('.order_status').on('change',function(){
@@ -180,10 +181,15 @@
                 data:{
                     action: 'change_status',
                     order_id: order_id,
-                    status:status
+                    status:status,
+                    _nonce: nonce,
                 },
                 success: function(res){
-
+                        if(res.success == true){
+                            alert('Cap nhat thanh cong')
+                        }else{
+                            alert('Cap nhat khong thanh cong')
+                        }
                 },
                 error: function (err){
 

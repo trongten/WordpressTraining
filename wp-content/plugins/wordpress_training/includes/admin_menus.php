@@ -43,5 +43,5 @@ function wordpresstraining_admin_page_order()
 
 function wordpresstraining_admin_page_setting()
 {
-   
+    include_once WORDPRESS_TRAINING_PATH.'includes/templates/settings.php';
 }

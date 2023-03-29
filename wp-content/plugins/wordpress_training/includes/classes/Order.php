@@ -70,7 +70,7 @@ class Order {
     {
         global $wpdb;
         $wpdb->update($this->_orders,$data,['id' => $id]);
-        return true;
+        return $this->findById($id);
     }
     public function trash($id)
     {
