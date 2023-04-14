@@ -191,19 +191,19 @@
 							<option value="administrator">Quản lý</option>
 						</select> dwad
 						<select name="default_role" id="default_role">
-							<option selected="selected" value="subscriber">Thành viên đăng ký</option>
-							<option value="contributor">Cộng tác viên</option>
-							<option value="author">Tác giả</option>
-							<option value="editor">Biên tập viên</option>
-							<option value="administrator">Quản lý</option>
-						</select> dwadaw 6d967e3a43
+							<option selected="selected" value="subscriber">1</option>
+							<option value="contributor">2</option>
+							<option value="author">3</option>
+							<option value="editor">4</option>
+							<option value="administrator">5</option>
+						</select> dwadaw
 						<select name="default_role" id="default_role">
-							<option selected="selected" value="subscriber">Thành viên đăng ký</option>
-							<option value="contributor">Cộng tác viên</option>
-							<option value="author">Tác giả</option>
-							<option value="editor">Biên tập viên</option>
-							<option value="administrator">Quản lý</option>
-						</select>
+							<option selected="selected" value="subscriber">1</option>
+							<option value="contributor">2</option>
+							<option value="author">3</option>
+							<option value="editor">4</option>
+							<option value="administrator">5</option>
+						</select>ưe
 					</td>
 				</tr>
 
